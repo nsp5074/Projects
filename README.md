@@ -1,4 +1,6 @@
 # Projects
-Coding challenges / projects done by Nicholas Pasqua
-NickPasqua91@gmail.com
-LinkedIn.com/in/NPasqua
+## Info
+Coding challenges and projects done by Nicholas Pasqua
+##Contact Info
+NickPasqua91@gmail.com\n
+www.linkedin.com/in/npasqua
