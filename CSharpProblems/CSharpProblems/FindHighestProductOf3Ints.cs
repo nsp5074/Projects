@@ -3,6 +3,11 @@
 /*
 Given an arrayOfInts, find the highestProduct you can get from three of the integers.
 The input arrayOfInts will always have at least three integers.
+
+Future Bonus:
+What if we wanted the highest product of 4 items?
+What if we wanted the highest product of kk items?
+If our highest product is really big, it could overflow ↴ . How should we protect against this?
 */
 
 namespace CSharpProblems
