@@ -8,6 +8,10 @@ namespace CSharpProblems
 {
     class Program
     {
+        /// <summary>
+        /// Main entry point of C Sharp Problems
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             System.Diagnostics.Debug.WriteLine("\nRunning Trading Stocks Problem");
@@ -24,7 +28,11 @@ namespace CSharpProblems
 
     class HelperFunctions
     {
-        // Turn any double array into a comma separated string
+        /// <summary>
+        /// Turn any double array into a comma separated string
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns>string representing the array</returns>
         public string ArrayToString(double[] array)
         {
             if (array is Array)
@@ -33,7 +41,11 @@ namespace CSharpProblems
                 return "";
         }
 
-        // Turn any double array into a comma separated string
+        /// <summary>
+        /// Turn any int array into a comma separated string
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns>string representing the array</returns>
         public string ArrayToString(int[] array)
         {
             if (array is Array)

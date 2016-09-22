@@ -24,7 +24,14 @@ namespace CSharpProblems
 {
     class TradingStocks
     {
-        // Assume a stock can never be < 0
+        /// <summary>
+        /// Retrieve the max profit from an array of stock prices
+        /// Can't short a stock by selling at a price that came
+        ///  before it was able to be bought
+        ///  A stock can't have a value of 0
+        /// </summary>
+        /// <param name="stockPricesYesterday"></param>
+        /// <returns>maxProfit</returns>
         private double GetMaxProfit(double[] stockPricesYesterday)
         {
             // Throw error if < 2 stocks. Can't trade.
@@ -58,6 +65,9 @@ namespace CSharpProblems
             return maxProfit;
         }
 
+        /// <summary>
+        /// Run the Trading Stock Problem
+        /// </summary>
         public void RunTradingStocks()
         {
             HelperFunctions helper = new HelperFunctions();
