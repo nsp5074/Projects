@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-/*
+﻿/*
 You have an array of integers, and for each index you want to find the product of every integer except the integer at that index.
 Write a function getProductsOfAllIntsExceptAtIndex() that takes an array of integers and returns an array of the products.
 
@@ -69,10 +63,9 @@ namespace CSharpProblems
         /// <summary>
         /// Run the Multiply Integer Array Problem
         /// </summary>
-        public void RunMultiplyIntArray()
+        /// <param name="helper"></param>
+        public void RunMultiplyIntArray(HelperFunctions helper)
         {
-            HelperFunctions helper = new HelperFunctions();
-
             int[] array = new int[] { 3, 5, 6, 7, 8 };
 
             System.Diagnostics.Debug.WriteLine("Input: " + helper.ArrayToString(array) + "\nOutput: " + helper.ArrayToString(GetProductsOfAllIntsExceptAtIndex(array)));

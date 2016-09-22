@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 /*
 Writing programming interview questions hasn't made me rich. Maybe trading Apple stocks will.
@@ -68,10 +67,9 @@ namespace CSharpProblems
         /// <summary>
         /// Run the Trading Stock Problem
         /// </summary>
-        public void RunTradingStocks()
+        /// <param name="helper"></param>
+        public void RunTradingStocks(HelperFunctions helper)
         {
-            HelperFunctions helper = new HelperFunctions();
-
             Random rnd = new Random();
             double[] stockPricesYesterday =
                 new double[] {
