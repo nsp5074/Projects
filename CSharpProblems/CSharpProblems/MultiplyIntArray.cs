@@ -15,6 +15,9 @@ by calculating:
   [7*3*4, 1*3*4, 1*7*4, 1*7*3]
 
 Do not use division in your solution.
+
+Bonus
+What if you could use division? Careful—watch out for zeroes!
 */
 
 namespace CSharpProblems
