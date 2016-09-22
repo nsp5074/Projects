@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /*
 Writing programming interview questions hasn't made me rich. Maybe trading Apple stocks will.
@@ -23,12 +20,16 @@ For example:
 No "shorting"—you must buy before you sell. You may not buy and sell in the same time step (at least 1 minute must pass).
 */
 
-namespace TradingStocks
+namespace CSharpProblems
 {
-    class Program
+    public class TradingStocks
     {
+        public TradingStocks()
+        {
+        }
+
         // Assume a stock can never be < 0
-        static double GetMaxProfit(double[] stockPricesYesterday)
+        private double GetMaxProfit(double[] stockPricesYesterday)
         {
             // Throw error if < 2 stocks. Can't trade.
             if (stockPricesYesterday.Length < 2)
@@ -61,10 +62,10 @@ namespace TradingStocks
             return maxProfit;
         }
 
-        static void Main(string[] args)
+        public void RunTradingStocks()
         {
             Random rnd = new Random();
-            double[] stockPricesYesterday = 
+            double[] stockPricesYesterday =
                 new double[] {
                     rnd.Next(1,100),
                     rnd.Next(1,100),

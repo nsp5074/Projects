@@ -23,12 +23,9 @@ by calculating:
 Do not use division in your solution.
 */
 
-namespace MultipleIntArray
+namespace CSharpProblems
 {
-    class Program
+    class MultiplyIntArray
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MultipleIntArray")]
+[assembly: AssemblyTitle("CSharpProblems")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MultipleIntArray")]
+[assembly: AssemblyProduct("CSharpProblems")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("747e108f-3bc8-4fdc-8083-482c1693b127")]
+[assembly: Guid("5ba1a07d-47f5-4bca-a370-abe477474fe9")]
 
 // Version information for an assembly consists of the following four values:
 //
