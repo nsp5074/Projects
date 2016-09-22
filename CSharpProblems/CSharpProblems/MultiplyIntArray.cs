@@ -27,9 +27,40 @@ namespace CSharpProblems
 {
     class MultiplyIntArray
     {
+        private int GetProductOfAllInts(int[] array)
+        {
+            int product = 1;
+
+            foreach(var num in array)
+            {
+                product *= num;
+            }
+
+            return product;
+        }
+
+        private int[] GetProductsOfAllIntsExceptAtIndex(int[] array)
+        {
+            int[] returnArray = new int[array.Length];
+
+            for(int i = 0; i < array.Length; i++)
+            {
+                int temp = array[i];
+                array[i] = 1;
+                returnArray[i] = GetProductOfAllInts(array);
+                array[i] = temp;
+            }
+
+            return returnArray;
+        }
+
         public void RunMultiplyIntArray()
         {
-            System.Diagnostics.Debug.WriteLine("");
+            HelperFunctions helper = new HelperFunctions();
+
+            int[] array = new int[] { 1, 7, 3, 4, 0 };
+
+            System.Diagnostics.Debug.WriteLine("Input: " + helper.ArrayToString(array) + "\nOutput: " + helper.ArrayToString(GetProductsOfAllIntsExceptAtIndex(array)));
         }
     }
 }

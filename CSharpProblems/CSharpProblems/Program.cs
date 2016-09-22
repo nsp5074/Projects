@@ -21,4 +21,25 @@ namespace CSharpProblems
             System.Diagnostics.Debug.WriteLine("Finished Multiply Int Array Problem\n");
         }
     }
+
+    class HelperFunctions
+    {
+        // Turn any double array into a comma separated string
+        public string ArrayToString(double[] array)
+        {
+            if (array is Array)
+                return string.Join(",", array.Select(p => p.ToString()).ToArray());
+            else
+                return "";
+        }
+
+        // Turn any double array into a comma separated string
+        public string ArrayToString(int[] array)
+        {
+            if (array is Array)
+                return string.Join(",", array.Select(p => p.ToString()).ToArray());
+            else
+                return "";
+        }
+    }
 }

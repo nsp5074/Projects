@@ -60,6 +60,8 @@ namespace CSharpProblems
 
         public void RunTradingStocks()
         {
+            HelperFunctions helper = new HelperFunctions();
+
             Random rnd = new Random();
             double[] stockPricesYesterday =
                 new double[] {
@@ -78,7 +80,7 @@ namespace CSharpProblems
             // Updated code takes care of issue of consistently decreasing stock
             //stockPricesYesterday = new double[] { 10, 8, 5, 2, 1};
 
-            System.Diagnostics.Debug.WriteLine("Stocks: " + string.Join(",", stockPricesYesterday.Select(p => p.ToString()).ToArray()) + "\nMax Profit: " + GetMaxProfit(stockPricesYesterday));
+            System.Diagnostics.Debug.WriteLine("Stocks: " + helper.ArrayToString(stockPricesYesterday) + "\nMax Profit: " + GetMaxProfit(stockPricesYesterday));
         }
     }
 }
