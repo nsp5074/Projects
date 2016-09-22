@@ -30,27 +30,32 @@ namespace TradingStocks
         // Assume a stock can never be < 0
         static double GetMaxProfit(double[] stockPricesYesterday)
         {
-            double maxProfit = 0;
-            double buyPrice = 0;
-            double sellPrice = 0;
-
-            foreach (var stockPrice in stockPricesYesterday)
+            // Throw error if < 2 stocks. Can't trade.
+            if (stockPricesYesterday.Length < 2)
             {
-                if ((buyPrice == 0 || stockPrice < buyPrice))
-                {
-                    buyPrice = stockPrice;
-                    sellPrice = 0;
-                } else if (buyPrice != 0 && stockPrice > sellPrice && stockPrice > buyPrice)
-                {
-                    sellPrice = stockPrice;
-                }
+                throw new Exception("Need 2 or more stocks to get a margin!");
+            }
 
-                // If current upper value price - lowest found price > current max profit
-                //  set the max profit
-                if ((sellPrice - buyPrice) > maxProfit)
-                {
-                    maxProfit = sellPrice - buyPrice;
-                }
+            // Initial buy price will always be the first stock
+            double buyPrice = stockPricesYesterday[0];
+            // Initial max profit will always be second stock - first (might be negative also)
+            double maxProfit = stockPricesYesterday[1] - stockPricesYesterday[0];
+
+            // Loop through stocks starting from stock #2
+            //  (if we start at first stock we might incorrectly set profit to 0
+            for (int i = 1; i < stockPricesYesterday.Length; i++)
+            {
+                // Get current stock price
+                double currentPrice = stockPricesYesterday[i];
+
+                // Get potential profit if sold right now
+                double potentialProfit = currentPrice - buyPrice;
+
+                // Check if potential profit > current max profit
+                maxProfit = Math.Max(potentialProfit, maxProfit);
+
+                // Update buy price if current is lower
+                buyPrice = Math.Min(currentPrice, buyPrice);
             }
 
             return maxProfit;
@@ -73,7 +78,10 @@ namespace TradingStocks
                     rnd.Next(1,100)
                 };
 
-            System.Diagnostics.Debug.WriteLine("Stocks: " + String.Join(",", stockPricesYesterday.Select(p => p.ToString()).ToArray()) + "\nMax Profit: " + GetMaxProfit(stockPricesYesterday));
+            // Updated code takes care of issue of consistently decreasing stock
+            //stockPricesYesterday = new double[] { 10, 8, 5, 2, 1};
+
+            System.Diagnostics.Debug.WriteLine("Stocks: " + string.Join(",", stockPricesYesterday.Select(p => p.ToString()).ToArray()) + "\nMax Profit: " + GetMaxProfit(stockPricesYesterday));
         }
     }
 }
