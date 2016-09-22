@@ -22,12 +22,8 @@ No "shorting"—you must buy before you sell. You may not buy and sell in the sa
 
 namespace CSharpProblems
 {
-    public class TradingStocks
+    class TradingStocks
     {
-        public TradingStocks()
-        {
-        }
-
         // Assume a stock can never be < 0
         private double GetMaxProfit(double[] stockPricesYesterday)
         {

@@ -15,7 +15,10 @@ namespace CSharpProblems
             ts.RunTradingStocks();
             System.Diagnostics.Debug.WriteLine("Finished Trading Stocks Problem\n");
 
-
+            System.Diagnostics.Debug.WriteLine("\nRunning Multiply Int Array Problem");
+            MultiplyIntArray mia = new MultiplyIntArray();
+            mia.RunMultiplyIntArray();
+            System.Diagnostics.Debug.WriteLine("Finished Multiply Int Array Problem\n");
         }
     }
 }

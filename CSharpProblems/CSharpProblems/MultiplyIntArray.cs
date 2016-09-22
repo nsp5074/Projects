@@ -27,5 +27,9 @@ namespace CSharpProblems
 {
     class MultiplyIntArray
     {
+        public void RunMultiplyIntArray()
+        {
+            System.Diagnostics.Debug.WriteLine("");
+        }
     }
 }
