@@ -5,9 +5,38 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprites name="Environment">
+      <sprites name="Passable">
+        <sprite>sprites\spr_sand</sprite>
+        <sprite>sprites\spr_dirt</sprite>
+        <sprite>sprites\spr_grass</sprite>
+      </sprites>
+      <sprites name="‫Impassable">
+        <sprite>sprites\spr_wall</sprite>
+        <sprite>sprites\spr_blockade</sprite>
+      </sprites>
+    </sprites>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bg_sand</background>
+  </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Environment">
+      <objects name="Passable">
+        <object>objects\obj_dirt</object>
+        <object>objects\obj_grass</object>
+      </objects>
+      <objects name="Impassable">
+        <object>objects\obj_blockade</object>
+        <object>objects\obj_wall</object>
+      </objects>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_one</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
